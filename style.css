@@ -1,0 +1,35 @@
+:root{
+    --background : cyan;
+    background-color: bisque;
+}
+
+.container{
+    background-color: burlywood;
+    display: block;
+}
+
+.player{
+    background-color: cornflowerblue;
+    width: 40%;
+    height: 350px;
+    font-size: 3vh;
+    text-align: center;
+    border: 4mm ridge rgba(10, 20, 50, .6);
+    border-radius: 25px;
+    margin: 10px;
+    float: left;
+}
+.dice{
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+}
+.footer{
+    width: 60%;
+    height: 120px;
+    background-color: cadetblue;
+}
+
+#ClickMe{
+    background-color: blue;
+}
