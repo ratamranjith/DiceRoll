@@ -1,11 +1,18 @@
 :root{
     --background : cyan;
-    background-color: bisque;
+    background-image: linear-gradient( 288deg,  rgba(0,85,255,1) 1.5%, rgba(4,56,115,1) 91.6% );
 }
 
 .container{
-    background-color: burlywood;
-    display: block;
+    /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    width: 98%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 20px;
 }
 
 .player{
@@ -20,16 +27,32 @@
     float: left;
 }
 .dice{
-    width: 64px;
-    height: 64px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
+    margin-top: -250px;
 }
 .footer{
-    width: 60%;
-    height: 120px;
-    background-color: cadetblue;
+    width: 98%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #ClickMe{
     background-color: blue;
+}
+.winner{
+    margin: 10px;
+    width: 98%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-align: center;
 }

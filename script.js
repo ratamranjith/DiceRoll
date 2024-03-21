@@ -8,7 +8,10 @@ high1 = document.querySelector(".high2score");
 diceImage = document.querySelector(".diceImg");
 clickRoll = document.querySelector(".clickRoll");
 updateScore = document.querySelector("#updateScore");
-
+player0 = document.querySelector(".player1");
+player1 = document.querySelector(".player2");
+winner = document.querySelector(".winner");
+winner.classList.add("hidden");
 diceImage.classList.add("hidden");
 let currentScore = [0, 0]; // Store scores of two players
 let currentPlayer = 0;
@@ -27,6 +30,12 @@ clickRoll.addEventListener("click", function () {
       tscore0.removeChild(tscore0.lastChild);
       tscore1.removeChild(tscore1.lastChild);
       isSadImageAdded = false;
+    }
+    if (currentScore[currentPlayer] >= 20) {
+      winner.classList.remove("hidden");
+      let playerName = eval(`player${currentPlayer}`);
+      winner.style.color = "#FFFFFF";
+      winner.textContent = `${playerName.textContent} Wins`;
     }
   } else {
     currentScore[currentPlayer] = 0;
@@ -57,3 +66,15 @@ updateScore.addEventListener("click", function () {
     currentPlayer = currentPlayer === 0 ? 1 : 0;
   }
 });
+
+function processNames() {
+  let Player1 = document.getElementById("Player1").value;
+  let Player2 = document.getElementById("Player2").value;
+  console.log(Player1);
+  if (Player1 === "" || Player2 === "") {
+    alert("Please enter the players name");
+  } else {
+    player0.textContent = Player1;
+    player1.textContent = Player2;
+  }
+}

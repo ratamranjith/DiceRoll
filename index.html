@@ -8,8 +8,24 @@
   </head>
   <body>
     <header>Dice Game</header>
+    <div class="winner">
+      <form>
+        <span>Enter the Players name</span>
+        <label>
+          <input type="text" id="Player1" name="Player1" placeholder="" />
+        </label>
+        <label>
+          <input type="text" id="Player2" name="Player2" placeholder="" />
+        </label>
+        <button type="button" onclick="processNames()" value="Enroll">
+          Enroll
+        </button>
+      </form>
+    </div>
     <div class="container">
       <section class="player">
+        <div class="player1"></div>
+        <hr />
         <div>Current Score:<span class="p1score">0</span></div>
         <br />
         <div>Score: <span class="temp1score">0</span></div>
@@ -18,6 +34,8 @@
         <br />
       </section>
       <section class="player">
+        <div class="player2"></div>
+        <hr />
         <div>Current Score:<span class="p2score">0</span></div>
         <br />
         <div>Score: <span class="temp2score">0</span></div>
