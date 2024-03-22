@@ -53,9 +53,10 @@ header{
     justify-content: center;
 }
 .footer  {
-    color: aliceblue;
+    color: rgb(9, 110, 0);
     margin:10px;
     width: 80%;
+    font-size: 2vh;
     align-items: flex-start;
     border-radius: 5px;
 }
