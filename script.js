@@ -11,6 +11,7 @@ updateScore = document.querySelector("#updateScore");
 player0 = document.querySelector(".player1");
 player1 = document.querySelector(".player2");
 winner = document.querySelector(".winner");
+body = document.getElementsByName("body");
 winner.classList.add("hidden");
 diceImage.classList.add("hidden");
 let currentScore = [0, 0]; // Store scores of two players
@@ -22,7 +23,6 @@ clickRoll.addEventListener("click", function () {
     let number = Math.trunc(Math.random() * 6) + 1;
     diceImage.classList.remove("hidden");
     diceImage.src = `images/dice${number}.png`;
-
     if (number !== 1) {
       currentScore[currentPlayer] += number;
       tscore0.textContent = currentScore[0];
@@ -36,7 +36,9 @@ clickRoll.addEventListener("click", function () {
         winner.classList.remove("hidden");
         let playerName = eval(`player${currentPlayer}`);
         winner.style.color = "#FFFFFF";
-        winner.textContent = `${playerName.textContent} Wins`;
+        document.body.style.background =
+          "linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%)";
+        winner.textContent = `${playerName.textContent} Wins . Please Refresh the page`;
       }
     } else {
       currentScore[currentPlayer] = 0;
