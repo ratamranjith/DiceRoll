@@ -1,30 +1,40 @@
 :root{
     --background : cyan;
-    background-image: linear-gradient( 288deg,  rgba(0,85,255,1) 1.5%, rgba(4,56,115,1) 91.6% );
+    background-image: url("./images/Secret-to-Dice.jpg"), linear-gradient( 90deg, #FCCF31 50%, #F55555 100%);
+    overflow: hidden;
+    background-repeat: no-repeat, repeat;
+    background-position: center;
 }
 
+header{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vh;
+    color: azure;
+    text-transform: capitalize;
+}
 .container{
-    /* background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%); */
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
     width: 98%;
     height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
-    border-radius: 20px;
+    border-radius: 200px;
 }
 
 .player{
-    background-color: cornflowerblue;
+    background-color:azure;
     width: 40%;
-    height: 350px;
+    height: 400px;
     font-size: 3vh;
     text-align: center;
-    border: 4mm ridge rgba(10, 20, 50, .6);
+    border: 1mm ridge rgba(10, 20, 50, .6);
     border-radius: 25px;
-    margin: 10px;
+    margin: 2px;
     float: left;
+    opacity: 0.8;
 }
 .dice{
     width: 100%;
@@ -35,16 +45,26 @@
     border-radius: 20px;
     margin-top: -250px;
 }
-.footer{
+.clickable{
     width: 98%;
     height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.footer  {
+    color: aliceblue;
+    margin:10px;
+    width: 80%;
+    align-items: flex-start;
+    border-radius: 5px;
+}
 
 #ClickMe{
-    background-color: blue;
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+    background-color: chartreuse;
 }
 .winner{
     margin: 10px;
@@ -55,4 +75,25 @@
     justify-content: center;
     border-radius: 5px;
     text-align: center;
+    color: aqua;
+}
+
+.playerInput{
+    background-color: aliceblue;
+    width: 320px;
+    height: 45px;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 12px;
+}
+span{
+    color: rgb(0, 60, 255);
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.enroll{
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
 }
